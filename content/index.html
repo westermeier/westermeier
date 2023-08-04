@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <script src="script/index.js" defer></script>
+    <link rel="icon" href="Img/logo.png">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+    <a style="display: none;" id="link"></a>
+    <div class="header">
+        <input type="file" id="fileInput">
+        <button onclick="newFile()">Save</button>
+        <input id="urlInput" type="url" style="font-size: 15px; color: black;" placeholder="Image/Video Url...">
+        <br>
+        <button onclick="add('<span>BIG</span>')">Add</button>
+        <button onclick="add('<hr>')">_____</button>
+        <button onclick="add('<b>BIG</b>')"><b>Add</b></button>
+        <button onclick="add('<i>BIG</i>')"><i>Add</i></button>
+        <button onclick="add('<i><b>BIG</b></i>')"><i><b>Add</b></i></button>
+        <button class="yellowBC" style="border: 0px solid rgb(0, 0, 0); padding: 3px;" onclick="add('<span class='+'yellowBC'+'>BIG</span>')">Add</button>
+        <button>
+            <select id="headerInput" onchange="addHeader()" style="color: black;">
+                <option value="1" style="color: black;">verry Big</option>
+                <option value="2" style="color: black;">Big</option>
+                <option value="3" style="color: black;">Normal</option>
+                <option value="4" style="color: black;">Small</option>
+                <option value="5" style="color: black;">verry Small</option>
+            </select>
+        </button>
+        <button onclick="addUrlImage()">Add Image From URL</button>
+        <button onclick="addLocalImage()">Add Local Image<input style="display: none;" type="file"
+                id="imageInput"></button>
+        <button onclick="addUrlVideo()">Add Video From URL</button>
+        <button onclick="addLocalVideo()">Add Local Video<input style="display: none;" type="file"
+                id="videoInput"></button>
+    </div>
+    <div contenteditable="true" id="content"></div>
+</body>
+
+</html>
